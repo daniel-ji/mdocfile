@@ -344,6 +344,14 @@ dataframe.</p>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">mdocfile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;my_mdoc_file.mdoc&#39;</span><span class="p">)</span>
 </code></pre></div>
+<p><code>Mdoc.from_string().as_dataframe()</code> will return the contents of string mdoc data as a pandas dataframe. 
+This is useful for mdoc data that is not stored in a file (e.g. from a database or a web request). </p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">mdocfile.Mdoc</span> <span class="k">as</span> <span class="nn">Mdoc</span>
+
+<span class="n">mdoc_data</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="n">mdoc</span> <span class="o">=</span> <span class="n">Mdoc</span><span class="o">.</span><span class="n">from_string</span><span class="p">(</span><span class="n">mdoc_data</span><span class="p">)</span><span class="o">.</span><span class="n">as_dataframe</span><span class="p">()</span>
+</code></pre></div>
 <hr />
 <p>For writing valid mdoc files, please see <a href="writing/">writing mdoc files</a>.</p>
 <h1 id="installation">Installation</h1>
